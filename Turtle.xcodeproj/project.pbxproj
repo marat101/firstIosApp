@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		338D3DD225218ACA97F49960 /* Pods_Turtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */; };
+		790688522A69D13400114265 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688512A69D13400114265 /* NeedleGenerated.swift */; };
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
 		79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FEB2A68AEB700C860DD /* ContentView.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.debug.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.debug.xcconfig"; sourceTree = "<group>"; };
+		790688512A69D13400114265 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FEB2A68AEB700C860DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +45,6 @@
 				26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */,
 				E7092A510E3F6945B6781F64 /* Pods-Turtle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -59,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				79D99FE82A68AEB700C860DD /* Turtle */,
-				79D99FE72A68AEB700C860DD /* Products */,
 				11A5D75FCCAB5175809C9AEF /* Pods */,
 				2F9E97E187FEC05DFFB33DC9 /* Frameworks */,
 			);
@@ -71,6 +71,7 @@
 				79D99FE62A68AEB700C860DD /* Turtle.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		79D99FE82A68AEB700C860DD /* Turtle */ = {
@@ -78,6 +79,8 @@
 			children = (
 				79D99FE92A68AEB700C860DD /* TurtleApp.swift */,
 				79D99FEB2A68AEB700C860DD /* ContentView.swift */,
+				790688512A69D13400114265 /* NeedleGenerated.swift */,
+				79D99FE72A68AEB700C860DD /* Products */,
 				79D99FED2A68AEB800C860DD /* Assets.xcassets */,
 				79D99FEF2A68AEB800C860DD /* Preview Content */,
 			);
@@ -103,6 +106,7 @@
 				79D99FE22A68AEB700C860DD /* Sources */,
 				79D99FE32A68AEB700C860DD /* Frameworks */,
 				79D99FE42A68AEB700C860DD /* Resources */,
+				D98E189A1A8C48BF8ABF73F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +163,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D98E189A1A8C48BF8ABF73F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBF8B684907325D09A7DAD33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +211,7 @@
 			files = (
 				79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */,
 				79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */,
+				790688522A69D13400114265 /* NeedleGenerated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
