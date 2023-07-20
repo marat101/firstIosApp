@@ -9,8 +9,18 @@
 /* Begin PBXBuildFile section */
 		338D3DD225218ACA97F49960 /* Pods_Turtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */; };
 		790688522A69D13400114265 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688512A69D13400114265 /* NeedleGenerated.swift */; };
+		7906886B2A69D24D00114265 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688552A69D24D00114265 /* ApiService.swift */; };
+		7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688572A69D24D00114265 /* ScheduleListViewModel.swift */; };
+		7906886D2A69D24D00114265 /* Variant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688582A69D24D00114265 /* Variant.swift */; };
+		7906886E2A69D24D00114265 /* TeachersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906885B2A69D24D00114265 /* TeachersList.swift */; };
+		7906886F2A69D24D00114265 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906885D2A69D24D00114265 /* RootComponent.swift */; };
+		790688702A69D24D00114265 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906885E2A69D24D00114265 /* HomeScreen.swift */; };
+		790688712A69D24D00114265 /* Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688602A69D24D00114265 /* Additional.swift */; };
+		790688722A69D24D00114265 /* SchedulesListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688642A69D24D00114265 /* SchedulesListRepository.swift */; };
+		790688732A69D24D00114265 /* ScheduleListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688662A69D24D00114265 /* ScheduleListComponent.swift */; };
+		790688742A69D24D00114265 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688682A69D24D00114265 /* Groups.swift */; };
+		790688752A69D24D00114265 /* GroupsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906886A2A69D24D00114265 /* GroupsList.swift */; };
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
-		79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FEB2A68AEB700C860DD /* ContentView.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
 		79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,9 +28,19 @@
 /* Begin PBXFileReference section */
 		26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.debug.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.debug.xcconfig"; sourceTree = "<group>"; };
 		790688512A69D13400114265 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		790688552A69D24D00114265 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		790688572A69D24D00114265 /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
+		790688582A69D24D00114265 /* Variant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variant.swift; sourceTree = "<group>"; };
+		7906885B2A69D24D00114265 /* TeachersList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeachersList.swift; sourceTree = "<group>"; };
+		7906885D2A69D24D00114265 /* RootComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		7906885E2A69D24D00114265 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		790688602A69D24D00114265 /* Additional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additional.swift; sourceTree = "<group>"; };
+		790688642A69D24D00114265 /* SchedulesListRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulesListRepository.swift; sourceTree = "<group>"; };
+		790688662A69D24D00114265 /* ScheduleListComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListComponent.swift; sourceTree = "<group>"; };
+		790688682A69D24D00114265 /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		7906886A2A69D24D00114265 /* GroupsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsList.swift; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
-		79D99FEB2A68AEB700C860DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +76,121 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		790688532A69D24D00114265 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				790688542A69D24D00114265 /* network */,
+				790688562A69D24D00114265 /* view */,
+				790688582A69D24D00114265 /* Variant.swift */,
+			);
+			name = common;
+			path = ../../../Desktop/TurtleApp/Turtle/common;
+			sourceTree = "<group>";
+		};
+		790688542A69D24D00114265 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				790688552A69D24D00114265 /* ApiService.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		790688562A69D24D00114265 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				790688572A69D24D00114265 /* ScheduleListViewModel.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		790688592A69D24D00114265 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				7906885A2A69D24D00114265 /* teachers_list */,
+				7906885C2A69D24D00114265 /* root */,
+				7906885F2A69D24D00114265 /* additional */,
+				790688622A69D24D00114265 /* groups_list */,
+			);
+			name = features;
+			path = ../../../Desktop/TurtleApp/Turtle/features;
+			sourceTree = "<group>";
+		};
+		7906885A2A69D24D00114265 /* teachers_list */ = {
+			isa = PBXGroup;
+			children = (
+				7906885B2A69D24D00114265 /* TeachersList.swift */,
+			);
+			path = teachers_list;
+			sourceTree = "<group>";
+		};
+		7906885C2A69D24D00114265 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				7906885D2A69D24D00114265 /* RootComponent.swift */,
+				7906885E2A69D24D00114265 /* HomeScreen.swift */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		7906885F2A69D24D00114265 /* additional */ = {
+			isa = PBXGroup;
+			children = (
+				790688602A69D24D00114265 /* Additional.swift */,
+				790688612A69D24D00114265 /* di */,
+			);
+			path = additional;
+			sourceTree = "<group>";
+		};
+		790688612A69D24D00114265 /* di */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		790688622A69D24D00114265 /* groups_list */ = {
+			isa = PBXGroup;
+			children = (
+				790688632A69D24D00114265 /* repository */,
+				790688652A69D24D00114265 /* di */,
+				790688672A69D24D00114265 /* model */,
+				790688692A69D24D00114265 /* view */,
+			);
+			path = groups_list;
+			sourceTree = "<group>";
+		};
+		790688632A69D24D00114265 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				790688642A69D24D00114265 /* SchedulesListRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		790688652A69D24D00114265 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				790688662A69D24D00114265 /* ScheduleListComponent.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		790688672A69D24D00114265 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				790688682A69D24D00114265 /* Groups.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		790688692A69D24D00114265 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7906886A2A69D24D00114265 /* GroupsList.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		79D99FDD2A68AEB700C860DD = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +212,9 @@
 		79D99FE82A68AEB700C860DD /* Turtle */ = {
 			isa = PBXGroup;
 			children = (
+				790688532A69D24D00114265 /* common */,
+				790688592A69D24D00114265 /* features */,
 				79D99FE92A68AEB700C860DD /* TurtleApp.swift */,
-				79D99FEB2A68AEB700C860DD /* ContentView.swift */,
 				790688512A69D13400114265 /* NeedleGenerated.swift */,
 				79D99FE72A68AEB700C860DD /* Products */,
 				79D99FED2A68AEB800C860DD /* Assets.xcassets */,
@@ -209,9 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */,
+				7906886F2A69D24D00114265 /* RootComponent.swift in Sources */,
+				790688752A69D24D00114265 /* GroupsList.swift in Sources */,
+				7906886E2A69D24D00114265 /* TeachersList.swift in Sources */,
 				79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */,
 				790688522A69D13400114265 /* NeedleGenerated.swift in Sources */,
+				790688702A69D24D00114265 /* HomeScreen.swift in Sources */,
+				7906886B2A69D24D00114265 /* ApiService.swift in Sources */,
+				790688712A69D24D00114265 /* Additional.swift in Sources */,
+				7906886D2A69D24D00114265 /* Variant.swift in Sources */,
+				790688732A69D24D00114265 /* ScheduleListComponent.swift in Sources */,
+				790688722A69D24D00114265 /* SchedulesListRepository.swift in Sources */,
+				7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */,
+				790688742A69D24D00114265 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
