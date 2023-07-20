@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338D3DD225218ACA97F49960 /* Pods_Turtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */; };
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
 		79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FEB2A68AEB700C860DD /* ContentView.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
@@ -14,11 +15,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.debug.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.debug.xcconfig"; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FEB2A68AEB700C860DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7092A510E3F6945B6781F64 /* Pods-Turtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.release.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338D3DD225218ACA97F49960 /* Pods_Turtle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A5D75FCCAB5175809C9AEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */,
+				E7092A510E3F6945B6781F64 /* Pods-Turtle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2F9E97E187FEC05DFFB33DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79D99FDD2A68AEB700C860DD = {
 			isa = PBXGroup;
 			children = (
 				79D99FE82A68AEB700C860DD /* Turtle */,
 				79D99FE72A68AEB700C860DD /* Products */,
+				11A5D75FCCAB5175809C9AEF /* Pods */,
+				2F9E97E187FEC05DFFB33DC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79D99FF42A68AEB800C860DD /* Build configuration list for PBXNativeTarget "Turtle" */;
 			buildPhases = (
+				FBF8B684907325D09A7DAD33 /* [CP] Check Pods Manifest.lock */,
 				79D99FE22A68AEB700C860DD /* Sources */,
 				79D99FE32A68AEB700C860DD /* Frameworks */,
 				79D99FE42A68AEB700C860DD /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBF8B684907325D09A7DAD33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Turtle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79D99FE22A68AEB700C860DD /* Sources */ = {
@@ -261,6 +312,7 @@
 		};
 		79D99FF52A68AEB800C860DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26C202E64C4CC9408F3EC14D /* Pods-Turtle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +342,7 @@
 		};
 		79D99FF62A68AEB800C860DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7092A510E3F6945B6781F64 /* Pods-Turtle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
