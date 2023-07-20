@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import NeedleFoundation
 
 @main
 struct TurtleApp: App {
+    
+    let rootComponent: RootComponent
+    init() {
+        registerProviderFactories()
+        self.rootComponent = RootComponent()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            rootComponent.homeScreen
         }
     }
 }
