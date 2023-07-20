@@ -11,14 +11,18 @@
 		79D99FEC2A68AEB700C860DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FEB2A68AEB700C860DD /* ContentView.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
 		79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */; };
+		CC00F0DB67827A8B2BF3593C /* Pods_Turtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B0D0415AFDF22097546B52 /* Pods_Turtle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38C14086673B477964AB95F1 /* Pods-Turtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.release.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.release.xcconfig"; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FEB2A68AEB700C860DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C6A1F8E9BF782A62E72C1C7 /* Pods-Turtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.debug.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.debug.xcconfig"; sourceTree = "<group>"; };
+		B9B0D0415AFDF22097546B52 /* Pods_Turtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC00F0DB67827A8B2BF3593C /* Pods_Turtle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771D9A6537600844265B9E48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C6A1F8E9BF782A62E72C1C7 /* Pods-Turtle.debug.xcconfig */,
+				38C14086673B477964AB95F1 /* Pods-Turtle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		79D99FDD2A68AEB700C860DD = {
 			isa = PBXGroup;
 			children = (
 				79D99FE82A68AEB700C860DD /* Turtle */,
 				79D99FE72A68AEB700C860DD /* Products */,
+				771D9A6537600844265B9E48 /* Pods */,
+				ECFE1BBABC187DBBFB9CFA02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ECFE1BBABC187DBBFB9CFA02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9B0D0415AFDF22097546B52 /* Pods_Turtle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79D99FF42A68AEB800C860DD /* Build configuration list for PBXNativeTarget "Turtle" */;
 			buildPhases = (
+				84948DACA4FA68C68204B42D /* [CP] Check Pods Manifest.lock */,
 				79D99FE22A68AEB700C860DD /* Sources */,
 				79D99FE32A68AEB700C860DD /* Frameworks */,
 				79D99FE42A68AEB700C860DD /* Resources */,
+				78D65FA55C74977A125111D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78D65FA55C74977A125111D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84948DACA4FA68C68204B42D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Turtle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79D99FE22A68AEB700C860DD /* Sources */ = {
@@ -195,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +329,7 @@
 		};
 		79D99FF52A68AEB800C860DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6A1F8E9BF782A62E72C1C7 /* Pods-Turtle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +359,7 @@
 		};
 		79D99FF62A68AEB800C860DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C14086673B477964AB95F1 /* Pods-Turtle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
