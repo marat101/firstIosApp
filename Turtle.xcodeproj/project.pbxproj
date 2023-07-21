@@ -83,8 +83,7 @@
 				790688562A69D24D00114265 /* view */,
 				790688582A69D24D00114265 /* Variant.swift */,
 			);
-			name = common;
-			path = ../../../Desktop/TurtleApp/Turtle/common;
+			path = common;
 			sourceTree = "<group>";
 		};
 		790688542A69D24D00114265 /* network */ = {
@@ -111,8 +110,7 @@
 				7906885F2A69D24D00114265 /* additional */,
 				790688622A69D24D00114265 /* groups_list */,
 			);
-			name = features;
-			path = ../../../Desktop/TurtleApp/Turtle/features;
+			path = features;
 			sourceTree = "<group>";
 		};
 		7906885A2A69D24D00114265 /* teachers_list */ = {
@@ -145,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = di;
+			name = di;
 			sourceTree = "<group>";
 		};
 		790688622A69D24D00114265 /* groups_list */ = {
