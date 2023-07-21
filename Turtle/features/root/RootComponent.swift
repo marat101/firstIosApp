@@ -11,11 +11,15 @@ import SwiftUI
 
 final class RootComponent: BootstrapComponent {
     
-    var groupsComponent: SchedulesListComponent {
-        return SchedulesListComponent(parent: self)
+    var groupsComponent: GroupsListComponent {
+        return GroupsListComponent(parent: self)
+    }
+    
+    var teachersComponent: TeachersListComponent {
+        return TeachersListComponent(parent: self)
     }
     
     var homeScreen: some View {
-        HomeScreen(gvm: groupsComponent.scheduleListViewModel)
+        HomeScreen(groups: groupsComponent, teachers: teachersComponent)
     }
 }

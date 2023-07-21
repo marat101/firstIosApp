@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct HomeScreen<GVM: ScheduleListViewModel>: View {
-    var gvm: GVM
+struct HomeScreen: View {
+    var groups: ViewBuilder
+    var teachers: ViewBuilder
     
     var body: some View {
         NavigationView(content: {
             TabView {
-                GroupsList(groupsViewModel: gvm)
-                TeachersList()
+                groups.view
+                teachers.view
                 Additional()
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

@@ -9,14 +9,15 @@ import Foundation
 
 let baseUrl = "http://45.155.207.232:8080/api/v2/"
 
-class BaseNetworkDataSource<T: Decodable>: Response {
-    typealias modelType = T
+class NetworkDataSource {
     
-    func request(
+    func request <T: Decodable>(
         url: String = baseUrl,
         path: String = "",
         task: @escaping (T?) -> Void
     ){
+        typealias modelType = T
+
         let url = URL(string: baseUrl + path)
         let task = URLSession.shared.dataTask(with: url!) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             DispatchQueue.main.async {
@@ -30,8 +31,4 @@ class BaseNetworkDataSource<T: Decodable>: Response {
         }
         task.resume()
     }
-}
-
-protocol Response {
-    associatedtype modelType: Decodable
 }

@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct GroupsList<VM:ScheduleListViewModel>: View  {
+struct SchedulesList<VM:ScheduleListViewModel>: View  {
     
-    @ObservedObject var groupsViewModel: VM
+    @ObservedObject var scheduleListViewModel: VM
 
     var body: some View {
         ScrollView {
             VStack {
                 Button("request", action: {
-                    groupsViewModel.loadGroups()
+                    scheduleListViewModel.loadGroups()
                 })
-                ForEach((groupsViewModel.schedules.group ?? []) + (groupsViewModel.schedules.teacher ?? []), id: \.self) { str in
+                ForEach(scheduleListViewModel.schedules ?? [], id: \.self) { str in
                     Text(str)
                 }
             }

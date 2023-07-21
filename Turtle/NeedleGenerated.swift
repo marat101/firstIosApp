@@ -25,7 +25,12 @@ extension RootComponent: Registration {
 
     }
 }
-extension SchedulesListComponent: Registration {
+extension GroupsListComponent: Registration {
+    public func registerItems() {
+
+    }
+}
+extension TeachersListComponent: Registration {
     public func registerItems() {
 
     }
@@ -47,7 +52,8 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 
 @inline(never) private func register1() {
     registerProviderFactory("^->RootComponent", factoryEmptyDependencyProvider)
-    registerProviderFactory("^->RootComponent->SchedulesListComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->GroupsListComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->TeachersListComponent", factoryEmptyDependencyProvider)
 }
 #endif
 
