@@ -19,6 +19,8 @@
 		790688732A69D24D00114265 /* ScheduleListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688662A69D24D00114265 /* ScheduleListComponent.swift */; };
 		790688742A69D24D00114265 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790688682A69D24D00114265 /* Groups.swift */; };
 		790688752A69D24D00114265 /* SchedulesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906886A2A69D24D00114265 /* SchedulesList.swift */; };
+		798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798115FF2A6B57A700DE10C5 /* ColorScheme.swift */; };
+		798116022A6B606100DE10C5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116012A6B606100DE10C5 /* Color.swift */; };
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
 		79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		790688662A69D24D00114265 /* ScheduleListComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListComponent.swift; sourceTree = "<group>"; };
 		790688682A69D24D00114265 /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		7906886A2A69D24D00114265 /* SchedulesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulesList.swift; sourceTree = "<group>"; };
+		798115FF2A6B57A700DE10C5 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		798116012A6B606100DE10C5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,8 +101,9 @@
 		790688562A69D24D00114265 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				790688572A69D24D00114265 /* ScheduleListViewModel.swift */,
 				79FB3EA72A6AF3DF007251F9 /* ViewBuilder.swift */,
+				798115FF2A6B57A700DE10C5 /* ColorScheme.swift */,
+				798116012A6B606100DE10C5 /* Color.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 		790688692A69D24D00114265 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				790688572A69D24D00114265 /* ScheduleListViewModel.swift */,
 				7906886A2A69D24D00114265 /* SchedulesList.swift */,
 			);
 			path = view;
@@ -335,8 +341,10 @@
 				79FB3EA82A6AF3DF007251F9 /* ViewBuilder.swift in Sources */,
 				7906886B2A69D24D00114265 /* ApiService.swift in Sources */,
 				790688712A69D24D00114265 /* Additional.swift in Sources */,
+				798116022A6B606100DE10C5 /* Color.swift in Sources */,
 				7906886D2A69D24D00114265 /* ScheduleType.swift in Sources */,
 				790688732A69D24D00114265 /* ScheduleListComponent.swift in Sources */,
+				798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */,
 				790688722A69D24D00114265 /* ScheduleListRepository.swift in Sources */,
 				7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */,
 				790688742A69D24D00114265 /* Groups.swift in Sources */,
