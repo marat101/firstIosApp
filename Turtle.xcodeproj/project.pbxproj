@@ -22,6 +22,10 @@
 		798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798115FF2A6B57A700DE10C5 /* ColorScheme.swift */; };
 		798116022A6B606100DE10C5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116012A6B606100DE10C5 /* Color.swift */; };
 		798116042A6C231800DE10C5 /* TurtlesBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116032A6C231800DE10C5 /* TurtlesBackground.swift */; };
+		79C4971C2A6CE19D00E68E17 /* qanelas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79C4971B2A6CE19D00E68E17 /* qanelas.ttf */; };
+		79C4971F2A6CE22F00E68E17 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4971E2A6CE22F00E68E17 /* Font.swift */; };
+		79C497212A6CE33F00E68E17 /* Topbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C497202A6CE33F00E68E17 /* Topbar.swift */; };
+		79C497252A6CF2E200E68E17 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C497242A6CF2E200E68E17 /* BottomNavigationView.swift */; };
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
 		79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */; };
@@ -44,6 +48,11 @@
 		798115FF2A6B57A700DE10C5 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		798116012A6B606100DE10C5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		798116032A6C231800DE10C5 /* TurtlesBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtlesBackground.swift; sourceTree = "<group>"; };
+		79C4971B2A6CE19D00E68E17 /* qanelas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = qanelas.ttf; sourceTree = "<group>"; };
+		79C4971E2A6CE22F00E68E17 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		79C497202A6CE33F00E68E17 /* Topbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topbar.swift; sourceTree = "<group>"; };
+		79C497222A6CE88400E68E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79C497242A6CF2E200E68E17 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 		79D99FE62A68AEB700C860DD /* Turtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,9 +112,11 @@
 		790688562A69D24D00114265 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				79C4971D2A6CE1AA00E68E17 /* font */,
 				79FB3EA72A6AF3DF007251F9 /* ViewBuilder.swift */,
 				798115FF2A6B57A700DE10C5 /* ColorScheme.swift */,
 				798116012A6B606100DE10C5 /* Color.swift */,
+				79C497202A6CE33F00E68E17 /* Topbar.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -123,9 +134,9 @@
 		7906885C2A69D24D00114265 /* root */ = {
 			isa = PBXGroup;
 			children = (
+				79C497232A6CF2C100E68E17 /* components */,
 				7906885D2A69D24D00114265 /* RootComponent.swift */,
 				7906885E2A69D24D00114265 /* HomeScreen.swift */,
-				798116032A6C231800DE10C5 /* TurtlesBackground.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -182,6 +193,24 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		79C4971D2A6CE1AA00E68E17 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				79C4971B2A6CE19D00E68E17 /* qanelas.ttf */,
+				79C4971E2A6CE22F00E68E17 /* Font.swift */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		79C497232A6CF2C100E68E17 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				798116032A6C231800DE10C5 /* TurtlesBackground.swift */,
+				79C497242A6CF2E200E68E17 /* BottomNavigationView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		79D99FDD2A68AEB700C860DD = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +232,7 @@
 		79D99FE82A68AEB700C860DD /* Turtle */ = {
 			isa = PBXGroup;
 			children = (
+				79C497222A6CE88400E68E17 /* Info.plist */,
 				790688532A69D24D00114265 /* common */,
 				790688592A69D24D00114265 /* features */,
 				79D99FE92A68AEB700C860DD /* TurtleApp.swift */,
@@ -282,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C4971C2A6CE19D00E68E17 /* qanelas.ttf in Resources */,
 				79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */,
 				79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */,
 			);
@@ -348,7 +379,10 @@
 				798116022A6B606100DE10C5 /* Color.swift in Sources */,
 				7906886D2A69D24D00114265 /* ScheduleType.swift in Sources */,
 				790688732A69D24D00114265 /* ScheduleListComponent.swift in Sources */,
+				79C4971F2A6CE22F00E68E17 /* Font.swift in Sources */,
+				79C497212A6CE33F00E68E17 /* Topbar.swift in Sources */,
 				798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */,
+				79C497252A6CF2E200E68E17 /* BottomNavigationView.swift in Sources */,
 				790688722A69D24D00114265 /* ScheduleListRepository.swift in Sources */,
 				7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */,
 				790688742A69D24D00114265 /* Groups.swift in Sources */,
@@ -408,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -480,10 +514,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Turtle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Turtle/common/view/font/qanelas.ttf Turtle/Preview\\ Content";
 				DEVELOPMENT_TEAM = KLX584C5B3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Turtle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -496,9 +531,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = turtleteam.Turtle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -510,10 +548,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Turtle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Turtle/common/view/font/qanelas.ttf Turtle/Preview\\ Content";
 				DEVELOPMENT_TEAM = KLX584C5B3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Turtle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,9 +565,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = turtleteam.Turtle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
