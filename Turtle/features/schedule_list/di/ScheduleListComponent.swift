@@ -17,7 +17,7 @@ final class GroupsListComponent: Component<EmptyDependency>, ViewBuilder {
         ScheduleListViewModelImpl(repository)
     }
     var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: scheduleListViewModel))
+        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel))
     }
 }
 
@@ -29,6 +29,6 @@ final class TeachersListComponent: Component<EmptyDependency>, ViewBuilder {
         ScheduleListViewModelImpl(repository)
     }
     var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: scheduleListViewModel))
+        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel))
     }
 }

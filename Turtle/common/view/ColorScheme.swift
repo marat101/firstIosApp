@@ -8,22 +8,26 @@
 import Foundation
 import SwiftUI
 
-struct ColorScheme: Equatable {
-    let backgroundColor1: Color
-    let backgroundColor2: Color
+struct ColorScheme {
+    let backgroundColors: [Color]
+    let backgroundTurtle: Color
+    
+    let topBarColors: [Color]
 }
 
 enum Theme {
     case light, dark
     
     private static let defaultLightTheme = ColorScheme(
-        backgroundColor1: Color(0xFCFDD7),
-        backgroundColor2: Color(0xB5E7AB)
+        backgroundColors: [Color(0xFCFDD7),Color(0xB5E7AB)],
+        backgroundTurtle: Color(0x417B65, alpha: 0.28),
+        topBarColors: [Color(0x417B65), Color(0xA7CE7B)]
     )
     
     private static let defaultDarkTheme = ColorScheme(
-        backgroundColor1: Color(0x0A192F),
-        backgroundColor2: Color(0x0A192F)
+        backgroundColors: [Color(0x0A192F),Color(0x0A192F)],
+        backgroundTurtle: Color(0x464F6B, alpha: 0.85),
+        topBarColors: [Color(0x112240),Color(0x112240)]
     )
     var colorScheme: ColorScheme {
         switch self {
@@ -36,12 +40,15 @@ enum Theme {
 }
 final class ThemeState: ObservableObject {
     @Published private(set) var colorScheme: ColorScheme
-    
-    init(colorScheme: ColorScheme? = nil) {
-        self.colorScheme = colorScheme ?? Theme.light.colorScheme
+    @Published private(set) var theme: Theme
+
+    init(colorScheme: Theme? = nil) {
+        self.colorScheme = colorScheme?.colorScheme ?? Theme.light.colorScheme
+        theme = colorScheme ?? Theme.light
     }
     
-    func setTheme(theme: ColorScheme){
-        colorScheme = theme
+    func setTheme(theme: Theme){
+        colorScheme = theme.colorScheme
+        self.theme = theme
     }
 }

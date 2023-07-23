@@ -11,19 +11,50 @@ import NeedleFoundation
 @main
 struct TurtleApp: App {
     
-    let themeState: ThemeState
-    @Environment(\.colorScheme) var currentTheme
+    @StateObject var themeState: ThemeState = ThemeState()
     let rootComponent: RootComponent
     init() {
         registerProviderFactories()
         self.rootComponent = RootComponent()
-        themeState = ThemeState()
-        themeState.setTheme(theme: currentTheme == .dark ? Theme.dark.colorScheme : Theme.light.colorScheme)
     }
     
     var body: some Scene {
         WindowGroup {
-            rootComponent.homeScreen.environmentObject(themeState)
+            GeometryReader { geometry in
+                VStack(spacing: 0) {
+                    LinearGradient(
+                        colors: themeState.colorScheme.topBarColors,
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    ).edgesIgnoringSafeArea(.top)
+                        .frame(height: 0)
+                    ZStack {
+                        LinearGradient(
+                            colors: themeState.colorScheme.topBarColors,
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                        HStack {
+                            Text("TurtleApp")
+                            Spacer()
+                            Button(
+                                action: {
+                                    themeState.setTheme(
+                                        theme: themeState.theme == Theme.dark ? Theme.light : Theme.dark)
+                                }
+                            ){
+                                Image(themeState.theme == .light ? "moon" : "sun").frame(width: 30, height: 30)
+                            }
+                        }.padding(.horizontal, 16)
+                    }.frame(height: 60)
+                    NavigationView(content: {
+                        rootComponent.homeScreen
+                            .environmentObject(themeState)
+                            .preferredColorScheme(.dark)
+                            .background(TurtlesBackground().environmentObject(themeState))
+                    })
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ import NeedleFoundation
 import SwiftUI
 
 final class RootComponent: BootstrapComponent {
-    
+        
     var groupsComponent: GroupsListComponent {
         return GroupsListComponent(parent: self)
     }
