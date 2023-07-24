@@ -14,6 +14,7 @@ struct TurtleApp: App {
     @StateObject var themeState: ThemeState = ThemeState()
     let rootComponent: RootComponent
     @State var topbarTitle = "TurtleApp"
+    
     init() {
         registerProviderFactories()
         self.rootComponent = RootComponent()
@@ -22,12 +23,14 @@ struct TurtleApp: App {
     var body: some Scene {
         WindowGroup {
             VStack(spacing: 0) {
-                Topbar(title: $topbarTitle).environmentObject(themeState)
+                Topbar(title: $topbarTitle)
+                    .environmentObject(themeState)
                 NavigationView(content: {
                     rootComponent.homeScreen
                         .environmentObject(themeState)
                         .preferredColorScheme(.dark)
-                        .background(TurtlesBackground().environmentObject(themeState))
+                        .background(TurtlesBackground()
+                            .environmentObject(themeState))
                 })
             }
         }

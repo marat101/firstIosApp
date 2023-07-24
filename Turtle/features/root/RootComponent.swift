@@ -19,6 +19,10 @@ final class RootComponent: BootstrapComponent {
         return TeachersListComponent(parent: self)
     }
     
+    var navigation: NavigationState {
+        return NavigatorImpl()
+    }
+    
     var homeScreen: some View {
         HomeScreen(groups: groupsComponent, teachers: teachersComponent)
     }

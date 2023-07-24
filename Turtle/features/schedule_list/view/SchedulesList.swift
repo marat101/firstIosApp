@@ -7,22 +7,34 @@
 
 import SwiftUI
 
-struct SchedulesList<VM:ScheduleListViewModel>: View  {
+struct SchedulesList<VM: ScheduleListViewModel>: View  {
     
     @StateObject var scheduleListViewModel: VM
     @EnvironmentObject var theme: ThemeState
+    @State var isVisible = false
+    let navigateToSchedule: ViewBuilder
     
     var body: some View {
-        ScrollView {
-            ZStack{
-                VStack {
-                    Button("request", action: {
-                        scheduleListViewModel.loadGroups()
-                    })
-                    ForEach(scheduleListViewModel.schedules ?? [], id: \.self) { str in
-                        Text(str)
-                    }}
-            }
-        }
+        ZStack(alignment: .center){
+            ScheduleSelectFrame(
+                isGroup: scheduleListViewModel.isGroup,
+                onNextClick: {
+                },
+                onSheetOpen: {
+                    scheduleListViewModel.loadGroups()
+                    isVisible = true},
+                selected: scheduleListViewModel.selected,
+                navigateView: navigateToSchedule
+            )
+        }.sheet(isPresented: $isVisible, content: {
+            SheetContent(
+                items: scheduleListViewModel.schedules ?? [],
+                isGroup: scheduleListViewModel.isGroup,
+                {isVisible = false},
+                onNameClick: { name in
+                    scheduleListViewModel.onNameChange(name: name)
+                    isVisible = false
+                })
+        })
     }
 }

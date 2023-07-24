@@ -7,18 +7,28 @@
 
 import Foundation
 
-protocol ScheduleListViewModel: ObservableObject {
+protocol Name {
+    var selected: String? { get }
+}
+
+protocol ScheduleListViewModel: Name, ObservableObject {
     var schedules: [String]? { get }
+    var isGroup: Bool { get }
     func loadGroups()
+    func onNameChange(name: String)
 }
 
 class ScheduleListViewModelImpl: ScheduleListViewModel {
-    
+
     private let repository: ScheduleListRepository
-    @Published var schedules: [String]?
+    @Published private(set) var schedules: [String]?
+    @Published private(set) var selected: String? = nil
     
-    init(_ repository: ScheduleListRepository) {
+    let isGroup: Bool
+    
+    init(_ repository: ScheduleListRepository, isGroup: Bool) {
         self.repository = repository
+        self.isGroup = isGroup
     }
             
     
@@ -29,5 +39,8 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
                 self.schedules = data
             }
         })
+    }
+    func onNameChange(name: String) {
+        selected = name
     }
 }

@@ -43,6 +43,8 @@ struct HomeScreen: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .animation(.default, value : selection)
             BottomNavigationView(selection: $selection, buttons: buttons)
+            
+            
         }
     }
 }
