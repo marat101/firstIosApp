@@ -23,6 +23,7 @@
 		798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798115FF2A6B57A700DE10C5 /* ColorScheme.swift */; };
 		798116022A6B606100DE10C5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116012A6B606100DE10C5 /* Color.swift */; };
 		798116042A6C231800DE10C5 /* TurtlesBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116032A6C231800DE10C5 /* TurtlesBackground.swift */; };
+		799368C42A70699600F4F43E /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799368C32A70699600F4F43E /* ScheduleViewModel.swift */; };
 		79C375EC2A6DC5E60041BDC4 /* SheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */; };
 		79C375F02A6E908B0041BDC4 /* ScheduleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375EF2A6E908B0041BDC4 /* ScheduleComponent.swift */; };
 		79C375F32A6E910A0041BDC4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375F22A6E910A0041BDC4 /* Schedule.swift */; };
@@ -56,6 +57,7 @@
 		798115FF2A6B57A700DE10C5 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		798116012A6B606100DE10C5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		798116032A6C231800DE10C5 /* TurtlesBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtlesBackground.swift; sourceTree = "<group>"; };
+		799368C32A70699600F4F43E /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContent.swift; sourceTree = "<group>"; };
 		79C375EF2A6E908B0041BDC4 /* ScheduleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleComponent.swift; sourceTree = "<group>"; };
 		79C375F22A6E910A0041BDC4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				79C375F22A6E910A0041BDC4 /* Schedule.swift */,
+				799368C32A70699600F4F43E /* ScheduleViewModel.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				79C375F52A6E91980041BDC4 /* Routes.swift in Sources */,
 				79C375EC2A6DC5E60041BDC4 /* SheetContent.swift in Sources */,
 				790688752A69D24D00114265 /* SchedulesList.swift in Sources */,
+				799368C42A70699600F4F43E /* ScheduleViewModel.swift in Sources */,
 				79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */,
 				790688522A69D13400114265 /* NeedleGenerated.swift in Sources */,
 				79C375F82A6E9F960041BDC4 /* Navigator.swift in Sources */,

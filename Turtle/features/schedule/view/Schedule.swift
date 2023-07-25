@@ -7,18 +7,47 @@
 
 import SwiftUI
 
-struct Schedule: View {
-    let name: String
+struct Schedule<VM: ScheduleViewModel>: View {
+
+    @EnvironmentObject var theme: ThemeState
+    @StateObject var viewModel: VM
+    
     var body: some View {
-        ZStack {
-            Color.clear.edgesIgnoringSafeArea(.all).navigationBarBackButtonHidden(true)
-            Text(name)
-        }
+        VStack {
+
+            LinearGradient(
+                colors: theme.colorScheme.topBarColors,
+                startPoint: .leading,
+                endPoint: .trailing
+            ).edgesIgnoringSafeArea(.top)
+                .frame(height: 0)
+                
+
+            
+            TabView(content: {
+                Text(viewModel.name)
+                Text(viewModel.name)
+                Text(viewModel.name)
+                Text(viewModel.name)
+                Text(viewModel.name)
+            }).tabViewStyle(.page(indexDisplayMode: .never)).edgesIgnoringSafeArea(.all)
+                .navigationBarTitle(viewModel.name, displayMode: .large)
+                .toolbar(content: {
+                    Button(
+                        action: {
+                            theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)
+                        }
+                    ){
+                        Image(!theme.isDark ? "moon" : "sun").frame(width: 30, height: 30)
+                    }
+                })
+            
+        }.background(TurtlesBackground())
     }
 }
 
-struct Schedule_Previews: PreviewProvider {
-    static var previews: some View {
-        Schedule(name: "aaaa")
-    }
-}
+//struct Schedule_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Schedule(name: "aaaa").environmentObject(ThemeState()).navigationTitle("aaaa")
+//    }
+//}

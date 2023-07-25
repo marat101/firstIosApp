@@ -11,9 +11,8 @@ import NeedleFoundation
 @main
 struct TurtleApp: App {
     
-    @StateObject var themeState: ThemeState = ThemeState()
+    @StateObject var theme: ThemeState = ThemeState()
     let rootComponent: RootComponent
-    @State var topbarTitle = "TurtleApp"
     
     init() {
         registerProviderFactories()
@@ -22,17 +21,12 @@ struct TurtleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            VStack(spacing: 0) {
-                Topbar(title: $topbarTitle)
-                    .environmentObject(themeState)
-                NavigationView(content: {
-                    rootComponent.homeScreen
-                        .environmentObject(themeState)
-                        .preferredColorScheme(.dark)
-                        .background(TurtlesBackground()
-                            .environmentObject(themeState))
-                })
-            }
+            NavigationView(content: {
+                rootComponent.homeScreen
+                    .environmentObject(theme)
+                    .preferredColorScheme(.dark)
+                    .background(TurtlesBackground())
+            }).environmentObject(theme)
         }
     }
 }

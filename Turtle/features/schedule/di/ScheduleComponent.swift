@@ -15,9 +15,13 @@ protocol ScheduleDeps: Dependency {
 
 final class ScheduleComponent: Component<ScheduleDeps>, ViewBuilder {
     
+    var viewModel: some ScheduleViewModel {
+        ScheduleViewModelImpl(name: dependency.name.selected ?? "")
+    }
+    
     var view: AnyView {
         AnyView(
-            Schedule(name: dependency.name.selected ?? "blya")
+            Schedule(viewModel: self.viewModel)
         )
     }
 }

@@ -21,6 +21,7 @@ struct HomeScreen: View {
     var groups: ViewBuilder
     var teachers: ViewBuilder
     @State var selection = 1
+    @EnvironmentObject var theme: ThemeState
     
     private let buttons = [
         NavigationButton("Группы","navigation_group"),
@@ -35,6 +36,28 @@ struct HomeScreen: View {
     
     var body: some View {
         VStack {
+            LinearGradient(
+                colors: theme.colorScheme.topBarColors,
+                startPoint: .leading,
+                endPoint: .trailing
+            ).edgesIgnoringSafeArea(.top)
+                .frame(height: 0)
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("TurtleApp")
+                            .font(.qanelas(size: 32))
+                            .foregroundColor(theme.colorScheme.topBarTitle)
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(
+                            action: {
+                                theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)
+                            }
+                        ){
+                            Image(!theme.isDark ? "moon" : "sun").frame(width: 30, height: 30)
+                        }}
+                })
+            
             TabView(selection: $selection) {
                 groups.view.tag(1)
                 teachers.view.tag(2)
@@ -43,8 +66,6 @@ struct HomeScreen: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .animation(.default, value : selection)
             BottomNavigationView(selection: $selection, buttons: buttons)
-            
-            
         }
     }
 }

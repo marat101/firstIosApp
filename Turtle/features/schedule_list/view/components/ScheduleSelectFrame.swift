@@ -70,6 +70,6 @@ struct ScheduleSelectFrame: View {
                     LinearGradient(colors: theme.colorScheme.nextBtnBackground, startPoint: .leading, endPoint: .trailing)
                 ).cornerRadius(12)
         .padding(.horizontal, 23)
-        }).navigationBarTitle("", displayMode: .inline)
+        }).environment(\.locale, .init(identifier: "ru")).navigationViewStyle(.stack)
     }
 }
