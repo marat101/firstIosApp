@@ -24,7 +24,7 @@ final class GroupsListComponent: Component<EmptyDependency>, ViewBuilder {
     }
     
     var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel, navigateToSchedule: schedule))
+        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel, navigateToSchedule: schedule).navigationBarTitleDisplayMode(.large))
     }
     
     var schedule: ScheduleComponent {

@@ -13,6 +13,7 @@ protocol ScheduleViewModel: ObservableObject {
 
 class ScheduleViewModelImpl : ScheduleViewModel {
     let name: String
+    
     init(name: String) {
         self.name = name
     }

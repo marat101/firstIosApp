@@ -17,6 +17,7 @@ struct TurtleApp: App {
     init() {
         registerProviderFactories()
         self.rootComponent = RootComponent()
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: theme.colorScheme.topBarTitle], for: .selected)
     }
     
     var body: some Scene {

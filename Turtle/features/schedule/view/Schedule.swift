@@ -11,6 +11,7 @@ struct Schedule<VM: ScheduleViewModel>: View {
 
     @EnvironmentObject var theme: ThemeState
     @StateObject var viewModel: VM
+
     
     var body: some View {
         VStack {
@@ -38,16 +39,9 @@ struct Schedule<VM: ScheduleViewModel>: View {
                             theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)
                         }
                     ){
-                        Image(!theme.isDark ? "moon" : "sun").frame(width: 30, height: 30)
+                        Image(!theme.isDark ? "moon" : "sun").frame(width: 30, height: 30) //TODO: картинки перенести
                     }
                 })
-            
-        }.background(TurtlesBackground())
+        }.background(TurtlesBackground()).navigationBarTitleDisplayMode(.inline)
     }
 }
-
-//struct Schedule_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Schedule(name: "aaaa").environmentObject(ThemeState()).navigationTitle("aaaa")
-//    }
-//}
