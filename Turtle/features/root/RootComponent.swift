@@ -19,6 +19,10 @@ final class RootComponent: BootstrapComponent {
         return TeachersListComponent(parent: self)
     }
     
+    var scheduleComponent: ScheduleComponent {
+        return ScheduleComponent(parent: self)
+    }
+    
     var navigation: NavigationState {
         return NavigatorImpl()
     }

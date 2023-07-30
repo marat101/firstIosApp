@@ -13,7 +13,6 @@ struct TurtleApp: App {
     
     @StateObject var theme: ThemeState = ThemeState()
     let rootComponent: RootComponent
-    
     init() {
         registerProviderFactories()
         self.rootComponent = RootComponent()
@@ -23,10 +22,21 @@ struct TurtleApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView(content: {
-                rootComponent.homeScreen
-                    .environmentObject(theme)
-                    .preferredColorScheme(.dark)
-                    .background(TurtlesBackground())
+                
+                VStack(content: {
+                    
+                    NavigationLink(
+                        destination: rootComponent.scheduleComponent.view.environmentObject(theme),
+                        tag: "aaa",
+                        selection: $theme.route) { EmptyView() }
+                    
+                    rootComponent.homeScreen
+                        .environmentObject(theme)
+                        .preferredColorScheme(.dark)
+                        .background(TurtlesBackground())
+                })
+               
+
             }).environmentObject(theme)
         }
     }

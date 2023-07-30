@@ -2,7 +2,7 @@
 //  ScheduleSelectFrame.swift
 //  Turtle
 //
-//  Created by Марат Наврузаиев on 23.07.2023.
+//  Created by Марат Наврузалиев on 23.07.2023.
 //
 
 import SwiftUI
@@ -14,7 +14,6 @@ struct ScheduleSelectFrame: View {
     let onNextClick: () -> Void
     let onSheetOpen: () -> Void
     let selected: String?
-    let navigateView: ViewBuilder
     
     var body: some View {
         ZStack {
@@ -60,7 +59,7 @@ struct ScheduleSelectFrame: View {
     }
     
     var nextBtn: some View {
-        NavigationLink (destination: navigateView.view, label: {
+        Button(action: {theme.navigate()}, label: {
             RoundedRectangle(cornerRadius: 12)
                 .foregroundColor(Color.clear)
                 .background(
@@ -70,6 +69,6 @@ struct ScheduleSelectFrame: View {
                     LinearGradient(colors: theme.colorScheme.nextBtnBackground, startPoint: .leading, endPoint: .trailing)
                 ).cornerRadius(12)
         .padding(.horizontal, 23)
-        }).environment(\.locale, .init(identifier: "ru")).navigationViewStyle(.stack)
+        })
     }
 }

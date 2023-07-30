@@ -12,7 +12,6 @@ struct SchedulesList<VM: ScheduleListViewModel>: View  {
     @StateObject var scheduleListViewModel: VM
     @EnvironmentObject var theme: ThemeState
     @State var isVisible = false
-    let navigateToSchedule: ViewBuilder
     
     var body: some View {
         ZStack(alignment: .center){
@@ -23,8 +22,7 @@ struct SchedulesList<VM: ScheduleListViewModel>: View  {
                 onSheetOpen: {
                     scheduleListViewModel.loadGroups()
                     isVisible = true},
-                selected: scheduleListViewModel.selected,
-                navigateView: navigateToSchedule
+                selected: scheduleListViewModel.selected
             )
         }.sheet(isPresented: $isVisible, content: {
             SheetContent(

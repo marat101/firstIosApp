@@ -92,10 +92,15 @@ enum Theme {
 final class ThemeState: ObservableObject {
     @Published private(set) var colorScheme: ColorScheme
     @Published private(set) var isDark: Bool
-
+    @Published var route: String? = "sss"
+    
     init(colorScheme: Theme? = nil) {
         self.colorScheme = colorScheme?.colorScheme ?? Theme.light.colorScheme
         isDark = colorScheme == Theme.dark
+    }
+    
+    func navigate(){
+        route = "aaa"
     }
     
     func setTheme(theme: Theme){

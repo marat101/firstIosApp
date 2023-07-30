@@ -9,14 +9,10 @@ import Foundation
 import SwiftUI
 import NeedleFoundation
 
-protocol ScheduleDeps: Dependency {
-    var name: Name { get }
-}
-
-final class ScheduleComponent: Component<ScheduleDeps>, ViewBuilder {
+final class ScheduleComponent: Component<EmptyDependency>, ViewBuilder {
     
     var viewModel: some ScheduleViewModel {
-        ScheduleViewModelImpl(name: dependency.name.selected ?? "")
+        ScheduleViewModelImpl(name: "")
     }
     
     var view: AnyView {

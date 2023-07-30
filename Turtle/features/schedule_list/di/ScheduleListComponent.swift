@@ -24,11 +24,7 @@ final class GroupsListComponent: Component<EmptyDependency>, ViewBuilder {
     }
     
     var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel, navigateToSchedule: schedule).navigationBarTitleDisplayMode(.large))
-    }
-    
-    var schedule: ScheduleComponent {
-        return ScheduleComponent(parent: self)
+        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel).navigationBarTitleDisplayMode(.large))
     }
 }
 
@@ -47,10 +43,6 @@ final class TeachersListComponent: Component<EmptyDependency>, ViewBuilder {
     }
     
     var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel, navigateToSchedule: schedule))
-    }
-    
-    var schedule: ScheduleComponent {
-        return ScheduleComponent(parent: self)
+        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel))
     }
 }
