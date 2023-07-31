@@ -2,17 +2,20 @@
 //  ScheduleList.swift
 //  Turtle
 //
-//  Created by Марат Наврузаиев on 16.07.2023.
+//  Created by Марат Наврузалиев on 16.07.2023.
 //
 
 import SwiftUI
 
-struct SchedulesList<VM: ScheduleListViewModel>: View  {
+struct SchedulesList<VM: ScheduleListViewModel>: View {
     
     @StateObject var scheduleListViewModel: VM
     @EnvironmentObject var theme: ThemeState
     @State var isVisible = false
     
+//    init(isGroups: Bool) {
+//        self.scheduleListViewModel = ScheduleListViewModelImpl(isGroup: isGroups) as! VM
+//    }
     var body: some View {
         ZStack(alignment: .center){
             ScheduleSelectFrame(

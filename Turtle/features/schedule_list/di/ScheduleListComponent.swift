@@ -9,7 +9,7 @@ import Foundation
 import NeedleFoundation
 import SwiftUI
 
-final class GroupsListComponent: Component<EmptyDependency>, ViewBuilder {
+final class GroupsListComponent: Component<EmptyDependency> {
     
     var repository: ScheduleListRepository = ScheduleListRepository(isGroup: true)
     
@@ -23,12 +23,12 @@ final class GroupsListComponent: Component<EmptyDependency>, ViewBuilder {
         scheduleListViewModel
     }
     
-    var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel).navigationBarTitleDisplayMode(.large))
+    @ViewBuilder func view() -> some View {
+        SchedulesList(scheduleListViewModel: self.scheduleListViewModel).navigationBarTitleDisplayMode(.large)
     }
 }
 
-final class TeachersListComponent: Component<EmptyDependency>, ViewBuilder {
+final class TeachersListComponent: Component<EmptyDependency> {
   
     var repository: ScheduleListRepository = ScheduleListRepository(isGroup: false)
     
@@ -42,7 +42,7 @@ final class TeachersListComponent: Component<EmptyDependency>, ViewBuilder {
         scheduleListViewModel
     }
     
-    var view: AnyView {
-        AnyView(SchedulesList(scheduleListViewModel: self.scheduleListViewModel))
+    @ViewBuilder func view() -> some View {
+        SchedulesList(scheduleListViewModel: self.scheduleListViewModel)
     }
 }

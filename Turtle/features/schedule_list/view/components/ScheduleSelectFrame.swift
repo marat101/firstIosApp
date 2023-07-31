@@ -13,7 +13,7 @@ struct ScheduleSelectFrame: View {
     let isGroup: Bool
     let onNextClick: () -> Void
     let onSheetOpen: () -> Void
-    let selected: String?
+    let selected: String
     
     var body: some View {
         ZStack {
@@ -48,7 +48,7 @@ struct ScheduleSelectFrame: View {
                                 .scaledToFit()
                                 .frame(height: 56)
                         }
-                        Text(selected ?? "Выбрать")
+                        Text(selected)
                             .font(.qanelas(size: 22))
                             .foregroundColor(theme.colorScheme.selectBtnText)
                     }
@@ -59,7 +59,10 @@ struct ScheduleSelectFrame: View {
     }
     
     var nextBtn: some View {
-        Button(action: {theme.navigate()}, label: {
+        
+        NavigationLink(destination: {
+            Schedule(viewModel: ScheduleViewModelImpl(name: selected))
+        }, label: {
             RoundedRectangle(cornerRadius: 12)
                 .foregroundColor(Color.clear)
                 .background(
@@ -70,5 +73,17 @@ struct ScheduleSelectFrame: View {
                 ).cornerRadius(12)
         .padding(.horizontal, 23)
         })
+        
+//        Button(action: {theme.navigate()}, label: {
+//            RoundedRectangle(cornerRadius: 12)
+//                .foregroundColor(Color.clear)
+//                .background(
+//                    Text("ДАЛЕЕ").font(.qanelas(size: 20)).foregroundColor(theme.colorScheme.nextBtnText)
+//                ).frame(height: 56)
+//                .background(
+//                    LinearGradient(colors: theme.colorScheme.nextBtnBackground, startPoint: .leading, endPoint: .trailing)
+//                ).cornerRadius(12)
+//        .padding(.horizontal, 23)
+//        })
     }
 }

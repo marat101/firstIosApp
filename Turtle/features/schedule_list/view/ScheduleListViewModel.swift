@@ -6,12 +6,10 @@
 //
 
 import Foundation
+import Combine
 
-protocol Name {
-    var selected: String? { get }
-}
-
-protocol ScheduleListViewModel: Name, ObservableObject {
+protocol ScheduleListViewModel: ObservableObject {
+    var selected: String { get }
     var schedules: [String]? { get }
     var isGroup: Bool { get }
     func loadGroups()
@@ -19,15 +17,16 @@ protocol ScheduleListViewModel: Name, ObservableObject {
 }
 
 class ScheduleListViewModelImpl: ScheduleListViewModel {
-
+   
     private let repository: ScheduleListRepository
-    @Published private(set) var schedules: [String]?
-    @Published private(set) var selected: String? = nil
     
+    @Published private(set) var schedules: [String]?
+    @Published private(set) var selected: String = "Выбрать"
+
     let isGroup: Bool
     
-    init(_ repository: ScheduleListRepository, isGroup: Bool) {
-        self.repository = repository
+    init(isGroup: Bool) {
+        self.repository = ScheduleListRepository(isGroup: isGroup)
         self.isGroup = isGroup
     }
             

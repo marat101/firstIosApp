@@ -22,9 +22,7 @@ struct Schedule<VM: ScheduleViewModel>: View {
                 endPoint: .trailing
             ).edgesIgnoringSafeArea(.top)
                 .frame(height: 0)
-                
-            Testtt()
-            
+                            
             TabView(content: {
                 Text(viewModel.name)
                 Text(viewModel.name)
@@ -43,16 +41,5 @@ struct Schedule<VM: ScheduleViewModel>: View {
                     }
                 })
         }.background(TurtlesBackground()).navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct Testtt: View {
-    
-    init(){
-        print("tagtag")
-    }
-    
-    var body: some View {
-        Text("ssss")
     }
 }

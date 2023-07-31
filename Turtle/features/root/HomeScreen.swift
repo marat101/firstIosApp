@@ -18,8 +18,8 @@ struct NavigationButton {
 
 struct HomeScreen: View {
     
-    var groups: ViewBuilder
-    var teachers: ViewBuilder
+//    var groups: GroupsListComponent
+//    var teachers: TeachersListComponent
     @State var selection = 1
     @EnvironmentObject var theme: ThemeState
     
@@ -28,11 +28,6 @@ struct HomeScreen: View {
         NavigationButton("Преподаватели","navigation_teacher"),
         NavigationButton("Дополнительно","navigation_additional")
     ]
-    
-    init(groups: ViewBuilder, teachers: ViewBuilder) {
-        self.groups = groups
-        self.teachers = teachers
-    }
     
     var body: some View {
         VStack {
@@ -59,8 +54,8 @@ struct HomeScreen: View {
                 })
             
             TabView(selection: $selection) {
-                groups.view.tag(1)
-                teachers.view.tag(2)
+                SchedulesList<ScheduleListViewModelImpl>(scheduleListViewModel: ScheduleListViewModelImpl(isGroup: true)).tag(1)
+                SchedulesList<ScheduleListViewModelImpl>(scheduleListViewModel: ScheduleListViewModelImpl(isGroup: false)).tag(2)
                 Additional().tag(3)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

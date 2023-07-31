@@ -9,15 +9,9 @@ import Foundation
 import SwiftUI
 import NeedleFoundation
 
-final class ScheduleComponent: Component<EmptyDependency>, ViewBuilder {
+final class ScheduleComponent: Component<EmptyDependency> {
     
-    var viewModel: some ScheduleViewModel {
-        ScheduleViewModelImpl(name: "")
-    }
-    
-    var view: AnyView {
-        AnyView(
-            Schedule(viewModel: self.viewModel)
-        )
+    @ViewBuilder func view(name: String) -> some View {
+            Schedule(viewModel: ScheduleViewModelImpl(name: name))
     }
 }
