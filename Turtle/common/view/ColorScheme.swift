@@ -21,7 +21,6 @@ struct ColorScheme {
 
     let transparentCardBackground: Color
     
-    // Select schedule card
     let selectGroupImage: String
     let selectTeacherImage: String
     let selectButtonTurtle: Color
@@ -33,6 +32,15 @@ struct ColorScheme {
     
     let nameItemBackground: Color
     let nameItemText: Color
+    
+    let dateBakground: Color
+    let dateText: Color
+    
+    let pairBackground: Color
+    let pairNumber: Color
+    let pairTextColor: Color
+    let pairTextSecondColor: Color
+    let pairNameBackground: Color
 }
 
 enum Theme {
@@ -56,7 +64,14 @@ enum Theme {
         nextBtnBackground: [Color(0x0A192F), Color(0x0A192F)],
         nextBtnText: Color(0x8D91D1),
         nameItemBackground: Color(0x3D4762, alpha: 0.85),
-        nameItemText: Color(0x8D91D1)
+        nameItemText: Color(0x8D91D1),
+        dateBakground: Color(0x3D4762),
+        dateText: Color(0xCCD6F6),
+        pairBackground: Color(0x464F6B, alpha: 0.83),
+        pairNumber: .white,
+        pairTextColor: Color(0x8D91D1),
+        pairTextSecondColor: Color(0xCFCFCF),
+        pairNameBackground: Color(0x112240, alpha: 0.35)
     )
     
     private static let defaultLightTheme = ColorScheme(
@@ -77,7 +92,14 @@ enum Theme {
         nextBtnBackground: [Color(0x417B65), Color(0xA7CE7B)],
         nextBtnText: Color(0xFFFFFF),
         nameItemBackground: Color(0xFFFFFF),
-        nameItemText: Color(0x96D162)
+        nameItemText: Color(0x96D162),
+        dateBakground: Color(0xFFF2F6E8),
+        dateText: Color(0x417B65),
+        pairBackground: Color(0xF5F6F1, alpha: 0.76),
+        pairNumber: .white,
+        pairTextColor: Color(0x417B65),
+        pairTextSecondColor: Color(0x9E9C9F),
+        pairNameBackground: Color(0xA7CE7B, alpha: 0.23)
     )
     
     var colorScheme: ColorScheme {
@@ -92,15 +114,10 @@ enum Theme {
 final class ThemeState: ObservableObject {
     @Published private(set) var colorScheme: ColorScheme
     @Published private(set) var isDark: Bool
-    @Published var route: String? = "sss"
     
     init(colorScheme: Theme? = nil) {
         self.colorScheme = colorScheme?.colorScheme ?? Theme.light.colorScheme
         isDark = colorScheme == Theme.dark
-    }
-    
-    func navigate(){
-        route = "aaa"
     }
     
     func setTheme(theme: Theme){

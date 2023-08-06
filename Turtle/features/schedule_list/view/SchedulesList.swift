@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ToastSwiftUI
 
 struct SchedulesList<VM: ScheduleListViewModel>: View {
     
@@ -15,16 +16,20 @@ struct SchedulesList<VM: ScheduleListViewModel>: View {
     
     var body: some View {
         ZStack(alignment: .center){
+            NavigationLink(isActive: $scheduleListViewModel.navigate,
+                           destination: {Schedule(viewModel: ScheduleViewModel(name: scheduleListViewModel.selected!))},
+                           label: {EmptyView()})
             ScheduleSelectFrame(
                 isGroup: scheduleListViewModel.isGroup,
                 onNextClick: {
+                    scheduleListViewModel.navigateToSchedule()
                 },
                 onSheetOpen: {
                     scheduleListViewModel.loadGroups()
                     isVisible = true},
-                selected: scheduleListViewModel.selected
+                selected: scheduleListViewModel.selected ?? "Выбрать"
             )
-        }.sheet(isPresented: $isVisible, content: {
+        }.toast($scheduleListViewModel.toast).sheet(isPresented: $isVisible, content: {
             SheetContent(
                 items: scheduleListViewModel.schedules ?? [],
                 isGroup: scheduleListViewModel.isGroup,

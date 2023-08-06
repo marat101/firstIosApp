@@ -26,7 +26,6 @@ struct ScheduleSelectFrame: View {
                     .resizable(resizingMode: .stretch)
                     .scaledToFit()
                     .frame(height: 83)
-                
                 Button(action: {
                     onSheetOpen()
                 }){
@@ -59,9 +58,7 @@ struct ScheduleSelectFrame: View {
     }
     
     var nextBtn: some View {
-        NavigationLink(destination: {
-            Schedule(viewModel: ScheduleViewModelImpl(name: selected))
-        }, label: {
+        Button(action: {onNextClick()}, label: {
             RoundedRectangle(cornerRadius: 12)
                 .foregroundColor(Color.clear)
                 .background(
@@ -72,17 +69,5 @@ struct ScheduleSelectFrame: View {
                 ).cornerRadius(12)
         .padding(.horizontal, 23)
         })
-        
-//        Button(action: {theme.navigate()}, label: {
-//            RoundedRectangle(cornerRadius: 12)
-//                .foregroundColor(Color.clear)
-//                .background(
-//                    Text("ДАЛЕЕ").font(.qanelas(size: 20)).foregroundColor(theme.colorScheme.nextBtnText)
-//                ).frame(height: 56)
-//                .background(
-//                    LinearGradient(colors: theme.colorScheme.nextBtnBackground, startPoint: .leading, endPoint: .trailing)
-//                ).cornerRadius(12)
-//        .padding(.horizontal, 23)
-//        })
     }
 }

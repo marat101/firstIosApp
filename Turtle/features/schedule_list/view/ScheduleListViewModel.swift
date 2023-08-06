@@ -9,19 +9,23 @@ import Foundation
 import Combine
 
 protocol ScheduleListViewModel: ObservableObject {
-    var selected: String { get }
+    var selected: String? { get }
     var schedules: [String]? { get }
     var isGroup: Bool { get }
+    var navigate: Bool { get set }
+    var toast: String? { get set }
     func loadGroups()
     func onNameChange(name: String)
+    func navigateToSchedule()
 }
 
 class ScheduleListViewModelImpl: ScheduleListViewModel {
-   
     private let repository: ScheduleListRepository
     
     @Published private(set) var schedules: [String]?
-    @Published private(set) var selected: String = "Выбрать"
+    @Published private(set) var selected: String? = nil
+    @Published var navigate: Bool = false
+    @Published var toast: String? = nil
 
     let isGroup: Bool
     
@@ -41,5 +45,12 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
     }
     func onNameChange(name: String) {
         selected = name
+    }
+    func navigateToSchedule() {
+        if let _ = selected {
+            navigate = true
+        } else {
+            toast = "Выберите расписание!"
+        }
     }
 }

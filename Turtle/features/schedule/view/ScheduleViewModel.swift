@@ -7,14 +7,18 @@
 
 import Foundation
 
-protocol ScheduleViewModel: ObservableObject {
-    var name: String { get }
-}
-
-class ScheduleViewModelImpl : ScheduleViewModel {
-    let name: String
+class ScheduleViewModel: ObservableObject {
+    
+    @Published private(set) var days: DaysList? = nil
+    @Published private(set) var name: String
+    private let repo = ScheduleRepository(isGroup: true) //TODO:
     
     init(name: String) {
         self.name = name
+    }
+    func loadData() {
+        repo.getSchedule(task: { data in
+            self.days = data?.first
+        })
     }
 }

@@ -21,8 +21,15 @@
 		798116042A6C231800DE10C5 /* TurtlesBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116032A6C231800DE10C5 /* TurtlesBackground.swift */; };
 		799368C42A70699600F4F43E /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799368C32A70699600F4F43E /* ScheduleViewModel.swift */; };
 		79ABA3C92A7F2C2700915287 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3C82A7F2C2700915287 /* NavController.swift */; };
+		79ABA3CC2A7FD4BB00915287 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3CB2A7FD4BB00915287 /* Schedule.swift */; };
+		79ABA3CE2A7FD51D00915287 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3CD2A7FD51D00915287 /* Day.swift */; };
+		79ABA3D02A7FD5AD00915287 /* Pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3CF2A7FD5AD00915287 /* Pairs.swift */; };
+		79ABA3D22A7FD67700915287 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3D12A7FD67700915287 /* Pair.swift */; };
+		79ABA3D52A7FD76900915287 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3D42A7FD76900915287 /* ScheduleRepository.swift */; };
+		79ABA3D82A7FE81C00915287 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3D72A7FE81C00915287 /* DayView.swift */; };
+		79ABA3DA2A80090F00915287 /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3D92A80090F00915287 /* PairView.swift */; };
 		79C375EC2A6DC5E60041BDC4 /* SheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */; };
-		79C375F32A6E910A0041BDC4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375F22A6E910A0041BDC4 /* Schedule.swift */; };
+		79C375F32A6E910A0041BDC4 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375F22A6E910A0041BDC4 /* ScheduleScreen.swift */; };
 		79C4971C2A6CE19D00E68E17 /* qanelas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79C4971B2A6CE19D00E68E17 /* qanelas.ttf */; };
 		79C4971F2A6CE22F00E68E17 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4971E2A6CE22F00E68E17 /* Font.swift */; };
 		79C497212A6CE33F00E68E17 /* Topbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C497202A6CE33F00E68E17 /* Topbar.swift */; };
@@ -47,8 +54,15 @@
 		798116032A6C231800DE10C5 /* TurtlesBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtlesBackground.swift; sourceTree = "<group>"; };
 		799368C32A70699600F4F43E /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		79ABA3C82A7F2C2700915287 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		79ABA3CB2A7FD4BB00915287 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		79ABA3CD2A7FD51D00915287 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		79ABA3CF2A7FD5AD00915287 /* Pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pairs.swift; sourceTree = "<group>"; };
+		79ABA3D12A7FD67700915287 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
+		79ABA3D42A7FD76900915287 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
+		79ABA3D72A7FE81C00915287 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		79ABA3D92A80090F00915287 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
 		79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContent.swift; sourceTree = "<group>"; };
-		79C375F22A6E910A0041BDC4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		79C375F22A6E910A0041BDC4 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
 		79C4971B2A6CE19D00E68E17 /* qanelas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = qanelas.ttf; sourceTree = "<group>"; };
 		79C4971E2A6CE22F00E68E17 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		79C497202A6CE33F00E68E17 /* Topbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topbar.swift; sourceTree = "<group>"; };
@@ -201,9 +215,39 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		79ABA3CA2A7FD49600915287 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				79ABA3CB2A7FD4BB00915287 /* Schedule.swift */,
+				79ABA3CD2A7FD51D00915287 /* Day.swift */,
+				79ABA3CF2A7FD5AD00915287 /* Pairs.swift */,
+				79ABA3D12A7FD67700915287 /* Pair.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		79ABA3D32A7FD75000915287 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				79ABA3D42A7FD76900915287 /* ScheduleRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		79ABA3D62A7FE6F900915287 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				79ABA3D72A7FE81C00915287 /* DayView.swift */,
+				79ABA3D92A80090F00915287 /* PairView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		79C375ED2A6E905A0041BDC4 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
+				79ABA3D32A7FD75000915287 /* repository */,
+				79ABA3CA2A7FD49600915287 /* model */,
 				79C375F12A6E90FB0041BDC4 /* view */,
 			);
 			path = schedule;
@@ -212,7 +256,8 @@
 		79C375F12A6E90FB0041BDC4 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				79C375F22A6E910A0041BDC4 /* Schedule.swift */,
+				79ABA3D62A7FE6F900915287 /* components */,
+				79C375F22A6E910A0041BDC4 /* ScheduleScreen.swift */,
 				799368C32A70699600F4F43E /* ScheduleViewModel.swift */,
 			);
 			path = view;
@@ -295,6 +340,7 @@
 				79D99FE22A68AEB700C860DD /* Sources */,
 				79D99FE32A68AEB700C860DD /* Frameworks */,
 				79D99FE42A68AEB700C860DD /* Resources */,
+				43F82AE2A5F454D9EBBD0436 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,6 +398,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43F82AE2A5F454D9EBBD0436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Turtle/Pods-Turtle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBF8B684907325D09A7DAD33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,11 +444,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ABA3DA2A80090F00915287 /* PairView.swift in Sources */,
+				79ABA3D52A7FD76900915287 /* ScheduleRepository.swift in Sources */,
+				79ABA3D82A7FE81C00915287 /* DayView.swift in Sources */,
 				79C375EC2A6DC5E60041BDC4 /* SheetContent.swift in Sources */,
 				790688752A69D24D00114265 /* SchedulesList.swift in Sources */,
 				799368C42A70699600F4F43E /* ScheduleViewModel.swift in Sources */,
 				79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */,
 				790688702A69D24D00114265 /* HomeScreen.swift in Sources */,
+				79ABA3D22A7FD67700915287 /* Pair.swift in Sources */,
 				798116042A6C231800DE10C5 /* TurtlesBackground.swift in Sources */,
 				7906886B2A69D24D00114265 /* ApiService.swift in Sources */,
 				7951D35A2A6D5C9B00721C4A /* ScheduleSelectFrame.swift in Sources */,
@@ -395,10 +462,13 @@
 				79C497212A6CE33F00E68E17 /* Topbar.swift in Sources */,
 				798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */,
 				79C497252A6CF2E200E68E17 /* BottomNavigationView.swift in Sources */,
+				79ABA3CE2A7FD51D00915287 /* Day.swift in Sources */,
 				790688722A69D24D00114265 /* ScheduleListRepository.swift in Sources */,
 				79ABA3C92A7F2C2700915287 /* NavController.swift in Sources */,
+				79ABA3D02A7FD5AD00915287 /* Pairs.swift in Sources */,
 				7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */,
-				79C375F32A6E910A0041BDC4 /* Schedule.swift in Sources */,
+				79C375F32A6E910A0041BDC4 /* ScheduleScreen.swift in Sources */,
+				79ABA3CC2A7FD4BB00915287 /* Schedule.swift in Sources */,
 				790688742A69D24D00114265 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

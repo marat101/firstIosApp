@@ -6,4 +6,5 @@ target 'Turtle' do
   use_frameworks!
 
   # Pods for Turtle
+  pod 'ToastSwiftUI'
 end
