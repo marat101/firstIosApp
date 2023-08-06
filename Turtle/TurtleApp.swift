@@ -11,9 +11,6 @@ import SwiftUI
 struct TurtleApp: App {
     
     var theme: ThemeState = ThemeState()
-    init() {
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: theme.colorScheme.topBarTitle], for: .selected)
-    }
     
     var body: some Scene {
         WindowGroup {

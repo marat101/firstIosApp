@@ -59,7 +59,6 @@ struct ScheduleSelectFrame: View {
     }
     
     var nextBtn: some View {
-        
         NavigationLink(destination: {
             Schedule(viewModel: ScheduleViewModelImpl(name: selected))
         }, label: {

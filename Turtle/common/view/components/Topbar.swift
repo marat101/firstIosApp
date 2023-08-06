@@ -7,37 +7,44 @@
 
 import SwiftUI
 
-struct Topbar: View {
+struct CustomTopbar: View {
     
-    @EnvironmentObject var themeState: ThemeState
-    @Binding var title: String
+    @EnvironmentObject var theme: ThemeState
+    var title: String
+    var onBackClick: (() -> Void)?
     
     var body: some View {
-        LinearGradient(
-            colors: themeState.colorScheme.topBarColors,
-            startPoint: .leading,
-            endPoint: .trailing
-        ).edgesIgnoringSafeArea(.top)
-            .frame(height: 0)
-        ZStack {
+        HStack(content: {
+            if let click = onBackClick {
+                Image("chevron.left")
+                    .renderingMode(.template)
+                    .foregroundColor(theme.colorScheme.topBarTitle)
+                    .frame(width: 20, height: 30)
+                    .onTapGesture {
+                        click()
+                    }
+            }
+            Text(title)
+                .font(.qanelas(size: 32))
+                .foregroundColor(theme.colorScheme.topBarTitle)
+            Spacer()
+            Button(
+                action: {theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)},
+                label: {Image(!theme.isDark ? "moon" : "sun").frame(height: 30)})
+        })
+        .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              minHeight: 60,
+              maxHeight: 60,
+              alignment: .center
+        ).padding(.horizontal, 16)
+        .background(
             LinearGradient(
-                colors: themeState.colorScheme.topBarColors,
+                colors: theme.colorScheme.topBarColors,
                 startPoint: .leading,
                 endPoint: .trailing
-            )
-            HStack {
-                Text(title)
-                    .font(Font.qanelas(size: 24))
-                    .foregroundColor(themeState.colorScheme.topBarTitle)
-                Spacer()
-                Button(
-                    action: {
-                        themeState.setTheme( theme: themeState.isDark ? Theme.light : Theme.dark)
-                    }
-                ){
-                    Image(!themeState.isDark ? "moon" : "sun").frame(width: 30, height: 30)
-                }
-            }.padding(.horizontal, 16)
-        }.frame(height: 60)
+            ).edgesIgnoringSafeArea(.top))
+        .navigationBarBackButtonHidden(true)
     }
 }

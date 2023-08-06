@@ -16,7 +16,7 @@ class ScheduleListRepository: NetworkDataSource {
     
     func getScheduleList(task: @escaping ([String]?) -> Void) {
         request(path: "schedule/list",task: { (data: Groups?) -> Void in
-            task(self.isGroup ? data?.group : data?.teacher)
+            task((self.isGroup ? data?.group : data?.teacher) ?? ["ИБА-21", "ИБА-22", "ИБА-23", "ИБА-24", "РТ-21"])
         })
     }
 }

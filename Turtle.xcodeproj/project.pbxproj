@@ -20,6 +20,7 @@
 		798116022A6B606100DE10C5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116012A6B606100DE10C5 /* Color.swift */; };
 		798116042A6C231800DE10C5 /* TurtlesBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798116032A6C231800DE10C5 /* TurtlesBackground.swift */; };
 		799368C42A70699600F4F43E /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799368C32A70699600F4F43E /* ScheduleViewModel.swift */; };
+		79ABA3C92A7F2C2700915287 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABA3C82A7F2C2700915287 /* NavController.swift */; };
 		79C375EC2A6DC5E60041BDC4 /* SheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */; };
 		79C375F32A6E910A0041BDC4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C375F22A6E910A0041BDC4 /* Schedule.swift */; };
 		79C4971C2A6CE19D00E68E17 /* qanelas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79C4971B2A6CE19D00E68E17 /* qanelas.ttf */; };
@@ -45,6 +46,7 @@
 		798116012A6B606100DE10C5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		798116032A6C231800DE10C5 /* TurtlesBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtlesBackground.swift; sourceTree = "<group>"; };
 		799368C32A70699600F4F43E /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		79ABA3C82A7F2C2700915287 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContent.swift; sourceTree = "<group>"; };
 		79C375F22A6E910A0041BDC4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		79C4971B2A6CE19D00E68E17 /* qanelas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = qanelas.ttf; sourceTree = "<group>"; };
@@ -109,10 +111,10 @@
 		790688562A69D24D00114265 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				79ABA3C72A7F2C0400915287 /* extension */,
 				79C375F92A6EAABA0041BDC4 /* components */,
 				79C4971D2A6CE1AA00E68E17 /* font */,
 				798115FF2A6B57A700DE10C5 /* ColorScheme.swift */,
-				798116012A6B606100DE10C5 /* Color.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -188,6 +190,15 @@
 				79C375EB2A6DC5E60041BDC4 /* SheetContent.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		79ABA3C72A7F2C0400915287 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				798116012A6B606100DE10C5 /* Color.swift */,
+				79ABA3C82A7F2C2700915287 /* NavController.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		79C375ED2A6E905A0041BDC4 /* schedule */ = {
@@ -385,6 +396,7 @@
 				798116002A6B57A700DE10C5 /* ColorScheme.swift in Sources */,
 				79C497252A6CF2E200E68E17 /* BottomNavigationView.swift in Sources */,
 				790688722A69D24D00114265 /* ScheduleListRepository.swift in Sources */,
+				79ABA3C92A7F2C2700915287 /* NavController.swift in Sources */,
 				7906886C2A69D24D00114265 /* ScheduleListViewModel.swift in Sources */,
 				79C375F32A6E910A0041BDC4 /* Schedule.swift in Sources */,
 				790688742A69D24D00114265 /* Groups.swift in Sources */,

@@ -11,17 +11,11 @@ struct Schedule<VM: ScheduleViewModel>: View {
 
     @EnvironmentObject var theme: ThemeState
     @StateObject var viewModel: VM
+    @Environment(\.dismiss) private var dismiss
 
-    
     var body: some View {
         VStack {
-
-            LinearGradient(
-                colors: theme.colorScheme.topBarColors,
-                startPoint: .leading,
-                endPoint: .trailing
-            ).edgesIgnoringSafeArea(.top)
-                .frame(height: 0)
+            CustomTopbar(title: viewModel.name){dismiss()}
                             
             TabView(content: {
                 Text(viewModel.name)
@@ -29,17 +23,10 @@ struct Schedule<VM: ScheduleViewModel>: View {
                 Text(viewModel.name)
                 Text(viewModel.name)
                 Text(viewModel.name)
-            }).tabViewStyle(.page(indexDisplayMode: .never)).edgesIgnoringSafeArea(.all)
-                .navigationBarTitle(viewModel.name, displayMode: .large)
-                .toolbar(content: {
-                    Button(
-                        action: {
-                            theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)
-                        }
-                    ){
-                        Image(!theme.isDark ? "moon" : "sun").frame(width: 30, height: 30) //TODO: картинки перенести
-                    }
-                })
-        }.background(TurtlesBackground()).navigationBarTitleDisplayMode(.inline)
+            }).tabViewStyle(.page(indexDisplayMode: .never))
+                .padding(.horizontal, 1)
+                
+        }.background(TurtlesBackground())
+            
     }
 }
