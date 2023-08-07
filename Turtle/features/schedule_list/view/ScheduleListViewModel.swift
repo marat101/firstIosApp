@@ -14,6 +14,7 @@ protocol ScheduleListViewModel: ObservableObject {
     var isGroup: Bool { get }
     var navigate: Bool { get set }
     var toast: String? { get set }
+    var search: String { get set }
     func loadGroups()
     func onNameChange(name: String)
     func navigateToSchedule()
@@ -26,6 +27,7 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
     @Published private(set) var selected: String? = nil
     @Published var navigate: Bool = false
     @Published var toast: String? = nil
+    @Published var search: String = ""
 
     let isGroup: Bool
     

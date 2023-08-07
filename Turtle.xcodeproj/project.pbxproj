@@ -37,6 +37,7 @@
 		79D99FEA2A68AEB700C860DD /* TurtleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99FE92A68AEB700C860DD /* TurtleApp.swift */; };
 		79D99FEE2A68AEB800C860DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FED2A68AEB800C860DD /* Assets.xcassets */; };
 		79D99FF12A68AEB800C860DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */; };
+		79F6A8872A816FE100146477 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6A8862A816FE100146477 /* Placeholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		79D99FE92A68AEB700C860DD /* TurtleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleApp.swift; sourceTree = "<group>"; };
 		79D99FED2A68AEB800C860DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D99FF02A68AEB800C860DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79F6A8862A816FE100146477 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		8C8DFDB3F05A39B5BAB5AB19 /* Pods_Turtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7092A510E3F6945B6781F64 /* Pods-Turtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turtle.release.xcconfig"; path = "Target Support Files/Pods-Turtle/Pods-Turtle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 			children = (
 				798116012A6B606100DE10C5 /* Color.swift */,
 				79ABA3C82A7F2C2700915287 /* NavController.swift */,
+				79F6A8862A816FE100146477 /* Placeholder.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				79C375F32A6E910A0041BDC4 /* ScheduleScreen.swift in Sources */,
 				79ABA3CC2A7FD4BB00915287 /* Schedule.swift in Sources */,
 				790688742A69D24D00114265 /* Groups.swift in Sources */,
+				79F6A8872A816FE100146477 /* Placeholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

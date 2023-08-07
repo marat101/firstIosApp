@@ -29,10 +29,13 @@ struct SchedulesList<VM: ScheduleListViewModel>: View {
                     isVisible = true},
                 selected: scheduleListViewModel.selected ?? "Выбрать"
             )
-        }.toast($scheduleListViewModel.toast).sheet(isPresented: $isVisible, content: {
+        }
+        .toast($scheduleListViewModel.toast)
+        .sheet(isPresented: $isVisible, content: {
             SheetContent(
                 items: scheduleListViewModel.schedules ?? [],
                 isGroup: scheduleListViewModel.isGroup,
+                text: $scheduleListViewModel.search,
                 {isVisible = false},
                 onNameClick: { name in
                     scheduleListViewModel.onNameChange(name: name)

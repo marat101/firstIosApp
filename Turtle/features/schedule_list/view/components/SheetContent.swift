@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SheetContent: View {
     @EnvironmentObject var theme: ThemeState
-    @State var text = ""
+    @Binding var text: String
     let items: [String]
     private let columns: [GridItem]
     let onNameClick: (String) -> Void
@@ -18,8 +18,10 @@ struct SheetContent: View {
     init(
         items: [String],
         isGroup: Bool,
+        text: Binding<String>,
         _ onCloseClick: @escaping () -> Void,
         onNameClick: @escaping (String) -> Void) {
+            self._text = text
             self.items = items
             self.onNameClick = onNameClick
             self.onClose = onCloseClick
@@ -27,12 +29,26 @@ struct SheetContent: View {
             [GridItem(.flexible()),GridItem(.flexible())] : [GridItem(.flexible())]
         }
     
+    
+    
     var body: some View {
         ScrollView{
             VStack {
-                TextField("Поиск…", text: $text).fixedSize(horizontal: false, vertical: true)
+                TextField("", text: $text)
+                    .placeholder(when: text.split(separator: " ").isEmpty, placeholder: {
+                        Text("Поиск…")
+                            .foregroundColor(theme.colorScheme.pairTextSecondColor)
+                            .font(.qanelas(size: 17))
+                    })
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.qanelas(size: 17))
+                    .foregroundColor(theme.colorScheme.pairTextColor)
+                    .padding(.top, 10)
+                    .padding(.horizontal, 5)
                 LazyVGrid(columns: columns, content: {
-                    ForEach(items, id: \.self, content: { name in
+                    ForEach(items.filter({ str in Bool()
+                        return text.split(separator: " ").isEmpty ? true : str.lowercased().contains(text.lowercased())
+                    }), id: \.self, content: { name in
                         NameItem(name: name){ str in
                             onNameClick(str)
                         }
@@ -70,16 +86,5 @@ struct NameItem: View {
                     theme.colorScheme.nameItemBackground
                 ).cornerRadius(12)
         })
-    }
-}
-
-struct SheetContent_Previews: PreviewProvider {
-    static var previews: some View {
-        SheetContent(
-            items: ["AAAAAAA","AAAAAAA","AAAAAAA","AAAAAAA","AAAAAAA","AAAAAAA"],
-            isGroup: true,
-            {},
-            onNameClick: { name in }
-        ).environmentObject(ThemeState())
     }
 }
