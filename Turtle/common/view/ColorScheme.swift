@@ -14,6 +14,7 @@ struct ColorScheme {
     
     let topBarColors: [Color]
     let topBarTitle: Color
+    let topBarThemeImage: String
     
     let bottomBarBackground: [Color]
     let navButtonEnabled: Color
@@ -51,6 +52,7 @@ enum Theme {
         backgroundTurtle: Color(0x464F6B, alpha: 0.85),
         topBarColors: [Color(0x112240),Color(0x112240)],
         topBarTitle: Color(0x8D91D1),
+        topBarThemeImage: "sun",
         bottomBarBackground: [Color(0x112240), Color(0x112240)],
         navButtonEnabled: Color(0x8D91D1),
         navButtonDisabled: Color(0x9E9C9F),
@@ -79,6 +81,7 @@ enum Theme {
         backgroundTurtle: Color(0x417B65, alpha: 0.28),
         topBarColors: [Color(0x417B65), Color(0xA7CE7B)],
         topBarTitle: Color(0xFFFFFF),
+        topBarThemeImage: "moon",
         bottomBarBackground: [Color(0x86C8A7), Color(0xB3E3AE)],
         navButtonEnabled: Color(0xFFFFFF),
         navButtonDisabled: Color(0x575756),
@@ -114,14 +117,17 @@ enum Theme {
 final class ThemeState: ObservableObject {
     @Published private(set) var colorScheme: ColorScheme
     @Published private(set) var isDark: Bool
-    
-    init(colorScheme: Theme? = nil) {
-        self.colorScheme = colorScheme?.colorScheme ?? Theme.light.colorScheme
-        isDark = colorScheme == Theme.dark
+    private let settings = SettingsService()
+
+    init() {
+        let lastTheme = settings.getTheme()
+        self.colorScheme = lastTheme ? Theme.dark.colorScheme : Theme.light.colorScheme
+        isDark = lastTheme
     }
     
-    func setTheme(theme: Theme){
-        colorScheme = theme.colorScheme
-        self.isDark = theme == .dark
+    func setTheme(isDark: Bool){
+        self.isDark = isDark
+        settings.setTheme(isDark: isDark)
+        colorScheme = isDark ? Theme.dark.colorScheme : Theme.light.colorScheme
     }
 }

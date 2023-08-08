@@ -30,10 +30,11 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
     @Published var search: String = ""
 
     let isGroup: Bool
-    
+
     init(isGroup: Bool) {
         self.repository = ScheduleListRepository(isGroup: isGroup)
         self.isGroup = isGroup
+        self.selected = repository.getLastName()
     }
             
     
@@ -47,6 +48,7 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
     }
     func onNameChange(name: String) {
         selected = name
+        repository.setLastName(name: name)
     }
     func navigateToSchedule() {
         if let _ = selected {

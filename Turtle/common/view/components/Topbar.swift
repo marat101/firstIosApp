@@ -29,8 +29,8 @@ struct CustomTopbar: View {
                 .foregroundColor(theme.colorScheme.topBarTitle)
             Spacer()
             Button(
-                action: {theme.setTheme( theme: theme.isDark ? Theme.light : Theme.dark)},
-                label: {Image(!theme.isDark ? "moon" : "sun").frame(height: 30)})
+                action: { theme.setTheme(isDark: !theme.isDark) },
+                label: {Image(theme.colorScheme.topBarThemeImage).frame(height: 30)})
         })
         .frame(
               minWidth: 0,
