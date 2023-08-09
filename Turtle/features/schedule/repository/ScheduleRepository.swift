@@ -14,9 +14,7 @@ class ScheduleRepository: NetworkDataSource {
         self.isGroup = isGroup
     }
     
-    func getSchedule(task: @escaping ([DaysList]?) -> Void) {
-        request(path: "schedule",task: { (data: [DaysList]?) -> Void in
-            task(data)
-        })
+    func getSchedule() async throws -> [DaysList]? {
+        return try await request(path: "schedule")
     }
 }

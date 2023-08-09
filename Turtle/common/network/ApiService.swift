@@ -13,22 +13,13 @@ class NetworkDataSource {
     
     func request <T: Decodable>(
         url: String = baseUrl,
-        path: String = "",
-        task: @escaping (T?) -> Void
-    ){
+        path: String = ""
+    ) async throws -> T? {
         typealias modelType = T
 
         let url = URL(string: baseUrl + path)
-        let task = URLSession.shared.dataTask(with: url!) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            DispatchQueue.main.async {
-                if let data = data {
-                    task(try? JSONDecoder().decode(modelType.self, from: data))
-                } else {
-                    task(nil)
-                }
-            }
-            
-        }
-        task.resume()
+        let (data, _) = try await URLSession.shared.data(for: URLRequest(url: url!))
+
+        return try? JSONDecoder().decode(modelType.self, from: data)
     }
 }

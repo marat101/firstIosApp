@@ -16,9 +16,9 @@ class ScheduleViewModel: ObservableObject {
     init(name: String) {
         self.name = name
     }
-    func loadData() {
-        repo.getSchedule(task: { data in
-            self.days = data?.first
+    @MainActor func loadData() {
+        Task.init(operation: {
+            do {days = try await repo.getSchedule()?.first ?? nil}
         })
     }
 }

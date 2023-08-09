@@ -45,7 +45,44 @@ struct TurtlesBackground: View {
                     .padding(.trailing, 22)
                 Spacer()
             }
+            Image("turtle_right")
+                .renderingMode(.template)
+                .resizable()
+                .scaledToFit()
+                .colorMultiply(theme.colorScheme.backgroundTurtle)
+                .frame(maxWidth: 49, maxHeight: .infinity, alignment: .bottom)
+                .padding(.bottom, 72)
+                .padding(.trailing, 50)
+            VStack {
+                Spacer()
+                Image("turtle_right")
+                    .renderingMode(.template)
+                    .resizable()
+                    .scaledToFit()
+                    .colorMultiply(theme.colorScheme.backgroundTurtle)
+                    .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+                    .padding(.bottom, 120)
+                    .padding(.leading, 23)
+            }
+            Image("turtle_right")
+                .renderingMode(.template)
+                .resizable()
+                .scaledToFit()
+                .colorMultiply(theme.colorScheme.backgroundTurtle)
+                .frame(maxWidth: 65, maxHeight: .infinity, alignment: .bottom)
+                .padding(.bottom, 160)
             
+            VStack {
+                Spacer()
+                Image("turtle_left")
+                    .renderingMode(.template)
+                    .resizable()
+                    .scaledToFit()
+                    .colorMultiply(theme.colorScheme.backgroundTurtle)
+                    .frame(maxWidth: .infinity, maxHeight: 47, alignment: .trailing)
+                    .padding(.bottom, 100)
+                    .padding(.trailing, 23)
+            }
         }
     }
         

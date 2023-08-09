@@ -28,22 +28,23 @@ class ScheduleListViewModelImpl: ScheduleListViewModel {
     @Published var navigate: Bool = false
     @Published var toast: String? = nil
     @Published var search: String = ""
-
+    
     let isGroup: Bool
-
+    
     init(isGroup: Bool) {
         self.repository = ScheduleListRepository(isGroup: isGroup)
         self.isGroup = isGroup
         self.selected = repository.getLastName()
     }
-            
     
-    func loadGroups(){
-        repository.getScheduleList(task: { data -> Void in
+    
+    @MainActor func loadGroups(){
+        Task.init(operation: {
+            do {
+            let data = try await repository.getScheduleList()
             if let data = data {
-                print(data)
                 self.schedules = data
-            }
+            }}
         })
     }
     func onNameChange(name: String) {

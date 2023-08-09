@@ -17,10 +17,9 @@ class ScheduleListRepository: NetworkDataSource {
         self.settings = SettingsService(isGroup: isGroup)
     }
 
-    func getScheduleList(task: @escaping ([String]?) -> Void) {
-        request(path: "schedule/list",task: { (data: Groups?) -> Void in
-            task((self.isGroup ? data?.group : data?.teacher) ?? ["ИБА-21", "ИБА-22", "ИБА-23", "ИБА-24", "РТ-21"])
-        })
+    func getScheduleList() async throws -> [String]? {
+        let data: Groups? = try await request(path: "schedule/list")
+        return self.isGroup ? data?.group : data?.teacher
     }
     
     func getLastName() -> String? {
